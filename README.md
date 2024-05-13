@@ -32,7 +32,7 @@ sudo apt install git
 Command to install git to clone this repository you can use your repository git url which you want to host :
 
 ```sh
-sudo git clone https://github.com/smurfcoders/fastapi-hosting.git
+sudo git clone https://github.com/LETME2X/FASTAPI.git
 ```
 
 Command to change location into the cloned folder you can use your repository name :
