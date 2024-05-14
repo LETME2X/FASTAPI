@@ -1,69 +1,60 @@
-### Built With
+# FastAPI WebSocket Chat Project
 
-- [Fastapi](https://github.com/tiangolo/fastapi)
-- [Python](https://www.python.org/)
-- [AWS](https://aws.amazon.com/)
+This project demonstrates a simple WebSocket chat application built using [FastAPI](https://fastapi.tiangolo.com/), a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.
 
-## Getting Started
+## Overview
 
-### Prerequisites
+The chat application allows users to connect via WebSocket and exchange messages in real-time. Each user is identified by a unique user ID provided by the client.
 
-We assume that you have a amazon ec2 instance.
+## Features
 
-After you enter the instance by ssh or any other method update the instance first by using below command:
+- Real-time communication using WebSocket protocol.
+- Allows multiple users to connect simultaneously.
+- Simple user interface for sending and receiving messages.
 
-```sh
-sudo apt-get update
-```
+## Installation
 
-Command to install python :
+1. Clone the repository:
 
-```sh
-sudo apt install python3-pip
-```
+   ```bash
+   git clone https://github.com/LETME2X/FASTAPI.git
+   ```
 
+2. Install dependencies:
 
-Command to install git to clone this repository :
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```sh
-sudo apt install git
-```
+## Usage
 
-Command to install git to clone this repository you can use your repository git url which you want to host :
+1. Run the FastAPI server:
 
-```sh
-sudo git clone https://github.com/LETME2X/FASTAPI.git
-```
+   ```bash
+   uvicorn main:app --reload
+   ```
 
-Command to change location into the cloned folder you can use your repository name :
+2. Open `index.html` in a web browser to access the chat interface.
 
-```sh
-cd fastapi-hosting
-```
+3. Enter a user ID (e.g., user1, user2) and start sending messages.
 
-Command to install all the requirements required for the project to run in our case we have created requirements.txt file you can also create your own requirements :
+## Project Structure
 
-```sh
-pip install -r requirements.txt
-```
+- `main.py`: Contains the FastAPI application code, including WebSocket endpoints.
+- `index.html`: Simple HTML interface for the chat application.
+- `README.md`: Documentation for the project.
+- `requirements.txt`: List of Python dependencies.
 
-Command to run the API :
+## Dependencies
 
-```sh
-python3 -m uvicorn main:app --host 0.0.0.0 --port 8000
-```
+- [FastAPI](https://fastapi.tiangolo.com/): Web framework for building APIs with Python.
+- [WebSocket](https://websockets.readthedocs.io/en/stable/): WebSocket implementation for Python.
+- [Python](https://www.python.org/): Programming language used for development.
 
-After running go to AWS instance --> Security tab --> Edit inbound rules --> create rule --> Enable access from anywhere.<br>
-Go to the public ip provided by the instance add :8000 in the end as our api is running at that particular port.
+## Contributing
 
-That's it you can now access your Fastapi from anywhere.
-
-
-
+Contributions are welcome! Feel free to open an issue or submit a pull request for any improvements or features you'd like to add.
 
 ## License
 
-This project is licensed under the **MIT license**. Feel free to edit and distribute this template as you like.
-
-See [LICENSE](LICENSE) for more information.
-
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
